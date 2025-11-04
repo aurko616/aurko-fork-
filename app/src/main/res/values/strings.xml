@@ -131,4 +131,15 @@
     <string name="choose_poster_button">Choose Poster</string>
     <string name="cancel_button">Cancel</string>
     <string name="create_event_button">Create Event</string>
+
+    <!-- Notification Strings -->
+    <string name="notify_winners_button">Notify Winners</string>
+    <string name="notify_cancelled_button">Notify Cancelled</string>
+    <string name="notification_message_winner">Congratulations! You won. Proceed to signup.</string>
+    <string name="notification_message_cancelled">Sorry. You were not selected. Try again next time.</string>
+    <string name="notification_sent_winners">Winner notifications sent.</string>
+    <string name="notification_sent_cancelled">Cancelled entrants notified.</string>
+    <string name="notification_partial_failure">Some notifications failed (%1$d).</string>
+    <string name="notification_all_failed">Failed to send notifications.</string>
+    <string name="notification_none_available">No entrants to notify.</string>
 </resources>

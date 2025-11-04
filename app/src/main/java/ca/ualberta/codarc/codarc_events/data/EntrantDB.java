@@ -8,6 +8,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import ca.ualberta.codarc.codarc_events.models.Entrant;
 
 /**
@@ -101,6 +104,48 @@ public class EntrantDB {
         entrant.setDeviceId(deviceId);
         db.collection("profiles").document(deviceId)
                 .set(entrant, SetOptions.merge())
+                .addOnSuccessListener(unused -> cb.onSuccess(null))
+                .addOnFailureListener(cb::onError);
+    }
+
+    /**
+     * Appends a notification entry for the given entrant profile.
+     *
+     * <p>The notification is stored under <code>profiles/&lt;deviceId&gt;/notifications</code>
+     * with a generated id so multiple notifications can coexist. Each entry records the
+     * associated event, message, category, creation timestamp, and read state.</p>
+     *
+     * @param deviceId the entrant's device identifier
+     * @param eventId the related event identifier
+     * @param message the human-readable notification body
+     * @param category short label (e.g., "winner" or "cancelled") for filtering
+     * @param cb callback invoked once the write completes
+     */
+    public void addNotification(String deviceId,
+                                String eventId,
+                                String message,
+                                String category,
+                                Callback<Void> cb) {
+        if (deviceId == null || deviceId.isEmpty()) {
+            cb.onError(new IllegalArgumentException("deviceId is empty"));
+            return;
+        }
+        if (message == null || message.isEmpty()) {
+            cb.onError(new IllegalArgumentException("message is empty"));
+            return;
+        }
+
+        DocumentReference profileRef = db.collection("profiles").document(deviceId);
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("eventId", eventId);
+        data.put("message", message);
+        data.put("category", category);
+        data.put("createdAt", System.currentTimeMillis());
+        data.put("read", false);
+
+        profileRef.collection("notifications")
+                .add(data)
                 .addOnSuccessListener(unused -> cb.onSuccess(null))
                 .addOnFailureListener(cb::onError);
     }
