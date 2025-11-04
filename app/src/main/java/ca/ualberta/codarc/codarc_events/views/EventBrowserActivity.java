@@ -2,7 +2,7 @@ package ca.ualberta.codarc.codarc_events.views;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageButton;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -83,6 +83,15 @@ public class EventBrowserActivity extends AppCompatActivity {
         if (profileIcon != null) {
             profileIcon.setOnClickListener(v -> {
                 Intent intent = new Intent(EventBrowserActivity.this, ProfileCreationActivity.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+            });
+        }
+
+        View notificationsTab = findViewById(R.id.tab_notifications);
+        if (notificationsTab != null) {
+            notificationsTab.setOnClickListener(v -> {
+                Intent intent = new Intent(EventBrowserActivity.this, NotificationsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             });

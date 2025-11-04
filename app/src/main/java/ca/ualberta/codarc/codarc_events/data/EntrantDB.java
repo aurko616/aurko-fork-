@@ -6,9 +6,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.SetOptions;
 
+import java.util.ArrayList;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import ca.ualberta.codarc.codarc_events.models.Entrant;
@@ -146,6 +151,64 @@ public class EntrantDB {
 
         profileRef.collection("notifications")
                 .add(data)
+                .addOnSuccessListener(unused -> cb.onSuccess(null))
+                .addOnFailureListener(cb::onError);
+    }
+
+    /**
+     * Retrieves all notifications for an entrant ordered by most recent first.
+     */
+    public void getNotifications(String deviceId, Callback<List<Map<String, Object>>> cb) {
+        if (deviceId == null || deviceId.isEmpty()) {
+            cb.onError(new IllegalArgumentException("deviceId is empty"));
+            return;
+        }
+
+        db.collection("profiles").document(deviceId)
+                .collection("notifications")
+                .orderBy("createdAt", Query.Direction.DESCENDING)
+                .get()
+                .addOnSuccessListener(querySnapshot -> {
+                    List<Map<String, Object>> notifications = new ArrayList<>();
+                    if (querySnapshot != null) {
+                        for (QueryDocumentSnapshot doc : querySnapshot) {
+                            Map<String, Object> data = new HashMap<>(doc.getData());
+                            data.put("id", doc.getId());
+                            notifications.add(data);
+                        }
+                    }
+                    cb.onSuccess(notifications);
+                })
+                .addOnFailureListener(cb::onError);
+    }
+
+    /**
+     * Updates arbitrary state on a notification document. Used by controllers
+     * to persist read/response fields after an entrant acts on an invite.
+     */
+    public void updateNotificationState(String deviceId,
+                                        String notificationId,
+                                        Map<String, Object> updates,
+                                        Callback<Void> cb) {
+        if (deviceId == null || deviceId.isEmpty()) {
+            cb.onError(new IllegalArgumentException("deviceId is empty"));
+            return;
+        }
+        if (notificationId == null || notificationId.isEmpty()) {
+            cb.onError(new IllegalArgumentException("notificationId is empty"));
+            return;
+        }
+        if (updates == null || updates.isEmpty()) {
+            cb.onError(new IllegalArgumentException("updates is empty"));
+            return;
+        }
+
+        DocumentReference notificationRef = db.collection("profiles")
+                .document(deviceId)
+                .collection("notifications")
+                .document(notificationId);
+
+        notificationRef.update(updates)
                 .addOnSuccessListener(unused -> cb.onSuccess(null))
                 .addOnFailureListener(cb::onError);
     }

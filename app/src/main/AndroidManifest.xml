@@ -67,6 +67,10 @@
             android:name=".views.ViewEnrolledActivity"
             android:exported="false"
             android:theme="@style/Theme.Codarcevents"/>
+        <activity
+            android:name=".views.NotificationsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Codarcevents"/>
 
     </application>
 

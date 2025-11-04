@@ -142,4 +142,16 @@
     <string name="notification_partial_failure">Some notifications failed (%1$d).</string>
     <string name="notification_all_failed">Failed to send notifications.</string>
     <string name="notification_none_available">No entrants to notify.</string>
+    <string name="notification_title">Notifications</string>
+    <string name="notification_back">Go back</string>
+    <string name="notification_empty">No notifications yet. Check back after organizers reach out.</string>
+    <string name="notification_accept">Accept</string>
+    <string name="notification_decline">Decline</string>
+    <string name="notification_status_accepted">Invitation accepted</string>
+    <string name="notification_status_declined">Invitation declined</string>
+    <string name="notification_status_acknowledged">Notification acknowledged</string>
+    <string name="notification_accept_success">You are successfully registered for this event.</string>
+    <string name="notification_decline_success">Invitation to join the event rejected.</string>
+    <string name="notification_unknown_event">Event update</string>
+    <string name="notification_response_error">Unable to update invitation. Please try again.</string>
 </resources>
