@@ -1,3 +1,9 @@
+/*
+ * Utility helper bundling validation logic for event creation and editing workflows,
+ * centralizing date and capacity checks.
+ * Outstanding issues: Replace string-based date handling with java.time types once API
+ * level permits.
+ */
 package ca.ualberta.codarc.codarc_events.controllers;
 
 import android.util.Log;

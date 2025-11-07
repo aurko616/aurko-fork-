@@ -1,3 +1,8 @@
+/*
+ * Activity showing detailed event information and available actions for entrants and
+ * organizers.
+ * Outstanding issues: Consolidate duplicate code for button state updates with waitlist views.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.graphics.Bitmap;

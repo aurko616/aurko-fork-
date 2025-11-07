@@ -1,3 +1,9 @@
+/*
+ * Firestore gateway for user document management, bridging shared user state between
+ * entrants and organizers.
+ * Outstanding issues: Refactor to reduce dependency on device id to enable account
+ * portability.
+ */
 package ca.ualberta.codarc.codarc_events.data;
 
 import androidx.annotation.NonNull;

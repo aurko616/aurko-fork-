@@ -1,3 +1,9 @@
+/*
+ * Controller managing entrant enrollment on waitlists, coordinating validation, Firestore
+ * writes, and notification dispatch.
+ * Outstanding issues: Share request throttling with LeaveWaitlistController to prevent
+ * duplicate submissions.
+ */
 package ca.ualberta.codarc.codarc_events.controllers;
 
 import androidx.annotation.NonNull;

@@ -1,3 +1,9 @@
+/*
+ * Firestore data source responsible for entrant persistence, retrieval, and notification
+ * management logic shared across controllers.
+ * Outstanding issues: Add unit tests to guard against regressions in async callback
+ * handling.
+ */
 package ca.ualberta.codarc.codarc_events.data;
 
 import androidx.annotation.NonNull;

@@ -1,3 +1,8 @@
+/*
+ * Activity presenting the organizer-facing interface for creating new events and
+ * delegating operations to CreateEventController.
+ * Outstanding issues: Introduce form state preservation across configuration changes.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.app.DatePickerDialog;

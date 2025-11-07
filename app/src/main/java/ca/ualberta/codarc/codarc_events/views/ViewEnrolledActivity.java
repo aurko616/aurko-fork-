@@ -1,3 +1,8 @@
+/*
+ * Activity listing entrants currently enrolled in an event to support organizer review
+ * and management.
+ * Outstanding issues: Add sorting controls for large participant lists.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.os.Bundle;

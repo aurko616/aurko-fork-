@@ -1,3 +1,8 @@
+/*
+ * Controller mediating entrant invitation responses, ensuring Firestore state reflects
+ * accept/decline actions and triggering downstream notifications.
+ * Outstanding issues: Add retry strategy for transient network failures.
+ */
 package ca.ualberta.codarc.codarc_events.controllers;
 
 import androidx.annotation.NonNull;

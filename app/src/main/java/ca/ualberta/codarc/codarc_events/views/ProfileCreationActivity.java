@@ -1,3 +1,7 @@
+/*
+ * Activity guiding new users through initial profile setup before joining events.
+ * Outstanding issues: Add progressive disclosure for optional contact fields.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.app.AlertDialog;

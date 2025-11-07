@@ -1,3 +1,7 @@
+/*
+ * Activity integrating camera-based QR scanning to register entrant attendance at events.
+ * Outstanding issues: Handle camera permission denial gracefully with fallback flows.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.os.Bundle;

@@ -1,3 +1,9 @@
+/*
+ * Provides a lightweight utility for persisting a deterministic device identity used as
+ * the primary key when communicating with Firestore.
+ * Outstanding issues: Consider migrating to Android's EncryptedSharedPreferences for
+ * stronger at-rest protection if privacy requirements change.
+ */
 package ca.ualberta.codarc.codarc_events.utils;
 
 import android.content.Context;

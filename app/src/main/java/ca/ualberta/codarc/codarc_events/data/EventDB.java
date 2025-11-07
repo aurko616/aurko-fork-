@@ -1,3 +1,8 @@
+/*
+ * Abstraction over event Firestore collections, enabling event creation, enrollment, and
+ * query operations used throughout the app.
+ * Outstanding issues: Implement caching to limit repeated reads during rapid refreshes.
+ */
 package ca.ualberta.codarc.codarc_events.data;
 
 import androidx.annotation.NonNull;

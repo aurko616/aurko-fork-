@@ -1,3 +1,8 @@
+/*
+ * Activity listing available events for entrants, wiring up adapters and providing search
+ * affordances.
+ * Outstanding issues: Integrate pull-to-refresh to improve data freshness.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.content.Intent;

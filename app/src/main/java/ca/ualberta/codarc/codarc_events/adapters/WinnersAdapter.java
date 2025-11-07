@@ -1,3 +1,8 @@
+/*
+ * Adapter responsible for presenting event winners along with their selection order in
+ * the post-draw winners screen.
+ * Outstanding issues: None currently identified.
+ */
 package ca.ualberta.codarc.codarc_events.adapters;
 
 import android.graphics.Color;

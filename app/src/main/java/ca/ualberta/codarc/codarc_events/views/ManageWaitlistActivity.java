@@ -1,3 +1,8 @@
+/*
+ * Activity enabling organizers to manage waitlist entrants, including invitation and
+ * removal actions via controller interactions.
+ * Outstanding issues: Add bulk action support for large waitlists.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.content.Intent;
