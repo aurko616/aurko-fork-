@@ -1,3 +1,8 @@
+/*
+ * Activity for organizers to edit existing event settings, including registration windows
+ * and capacity controls.
+ * Outstanding issues: Improve validation feedback consistency with CreateEventActivity.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.content.Intent;

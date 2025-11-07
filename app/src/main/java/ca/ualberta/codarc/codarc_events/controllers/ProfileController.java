@@ -1,3 +1,8 @@
+/*
+ * Controller responsible for loading and updating entrant and organizer profile data,
+ * bridging UI flows with Firestore persistence.
+ * Outstanding issues: Add caching to minimize redundant network calls during rotations.
+ */
 package ca.ualberta.codarc.codarc_events.controllers;
 
 import androidx.annotation.NonNull;

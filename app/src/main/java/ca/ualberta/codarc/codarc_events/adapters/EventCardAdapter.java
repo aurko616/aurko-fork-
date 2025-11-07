@@ -1,3 +1,8 @@
+/*
+ * RecyclerView adapter that renders event summaries for the browsing experience and
+ * dispatches click callbacks to open details.
+ * Outstanding issues: Evaluate DiffUtil integration to optimize refresh efficiency.
+ */
 package ca.ualberta.codarc.codarc_events.adapters;
 
 import android.content.Context;

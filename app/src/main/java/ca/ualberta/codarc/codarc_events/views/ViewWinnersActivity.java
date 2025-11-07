@@ -1,3 +1,8 @@
+/*
+ * Activity showing winners selected from a draw, providing context and navigation for
+ * organizers.
+ * Outstanding issues: Add sharing/export support for winners list.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.os.Bundle;

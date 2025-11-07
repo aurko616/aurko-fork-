@@ -1,3 +1,8 @@
+/*
+ * Activity presenting notification history to entrants and allowing dismissal of processed
+ * items.
+ * Outstanding issues: Implement pagination for long notification histories.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.content.DialogInterface;

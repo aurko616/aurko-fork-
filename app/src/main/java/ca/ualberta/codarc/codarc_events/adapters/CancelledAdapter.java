@@ -1,3 +1,8 @@
+/*
+ * RecyclerView adapter dedicated to presenting cancelled entrants that can be replaced
+ * with waitlisted participants.
+ * Outstanding issues: Consider paging or diffing if cancelled lists become large.
+ */
 package ca.ualberta.codarc.codarc_events.adapters;
 
 import android.view.LayoutInflater;

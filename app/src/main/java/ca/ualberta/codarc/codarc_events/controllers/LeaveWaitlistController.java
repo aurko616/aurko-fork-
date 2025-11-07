@@ -1,3 +1,9 @@
+/*
+ * Controller handling entrant waitlist exit flows, coordinating Firestore updates and
+ * UI callbacks.
+ * Outstanding issues: Merge with JoinWaitlistController to reduce duplicated Firestore
+ * interactions.
+ */
 package ca.ualberta.codarc.codarc_events.controllers;
 
 import androidx.annotation.NonNull;

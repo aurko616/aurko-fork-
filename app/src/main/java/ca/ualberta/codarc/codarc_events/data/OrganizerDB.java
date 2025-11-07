@@ -1,3 +1,8 @@
+/*
+ * Firestore access layer encapsulating organizer document interactions including profile
+ * reads, writes, and invitations.
+ * Outstanding issues: Consolidate duplicate query logic shared with EntrantDB.
+ */
 package ca.ualberta.codarc.codarc_events.data;
 
 import androidx.annotation.NonNull;

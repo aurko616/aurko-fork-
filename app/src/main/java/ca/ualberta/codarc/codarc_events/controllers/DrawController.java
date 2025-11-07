@@ -1,3 +1,8 @@
+/*
+ * Controller coordinating random draw execution, bridging entrant data and Firestore
+ * updates while handling cancellation and winner promotion.
+ * Outstanding issues: Extract randomness strategy for improved testability.
+ */
 package ca.ualberta.codarc.codarc_events.controllers;
 
 import androidx.annotation.NonNull;

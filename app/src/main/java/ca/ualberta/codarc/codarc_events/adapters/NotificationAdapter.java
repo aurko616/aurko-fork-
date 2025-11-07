@@ -1,3 +1,9 @@
+/*
+ * RecyclerView adapter for presenting notification history items to the user with a
+ * simple dismiss action surface.
+ * Outstanding issues: Support swipe-to-dismiss gestures for parity with Material
+ * guidelines.
+ */
 package ca.ualberta.codarc.codarc_events.adapters;
 
 import android.view.LayoutInflater;

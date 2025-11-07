@@ -1,3 +1,8 @@
+/*
+ * Activity controlling the draw experience for organizers, triggering DrawController and
+ * presenting winners and waitlist updates.
+ * Outstanding issues: Improve state restoration when the activity is backgrounded mid-draw.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.app.AlertDialog;

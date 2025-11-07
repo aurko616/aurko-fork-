@@ -1,3 +1,8 @@
+/*
+ * Entry activity acting as the app's landing experience, routing users based on profile
+ * status and device identity.
+ * Outstanding issues: Provide analytics instrumentation for onboarding drop-off.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.content.Intent;

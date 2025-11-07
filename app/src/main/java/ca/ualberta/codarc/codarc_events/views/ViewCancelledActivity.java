@@ -1,3 +1,8 @@
+/*
+ * Activity summarizing entrants who declined invitations or were cancelled, enabling
+ * organizers to manage replacements.
+ * Outstanding issues: Provide filtering options by cancellation reason.
+ */
 package ca.ualberta.codarc.codarc_events.views;
 
 import android.app.AlertDialog;

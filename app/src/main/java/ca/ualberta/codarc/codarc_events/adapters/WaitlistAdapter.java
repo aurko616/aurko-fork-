@@ -1,3 +1,8 @@
+/*
+ * Adapter that powers waitlist visualizations, handling entrant display and exposing
+ * hooks for invitation and removal actions.
+ * Outstanding issues: Improve accessibility labels for action buttons.
+ */
 package ca.ualberta.codarc.codarc_events.adapters;
 
 import android.view.LayoutInflater;

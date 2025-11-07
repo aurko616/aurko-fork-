@@ -1,3 +1,9 @@
+/*
+ * Controller orchestrating event creation flows, coordinating validation and Firestore
+ * persistence for organizer-driven event setup.
+ * Outstanding issues: Extract duplication shared with EventSettingsActivity to reduce
+ * lifecycle coupling.
+ */
 package ca.ualberta.codarc.codarc_events.controllers;
 
 import androidx.annotation.NonNull;
